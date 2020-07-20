@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HeroPage</title>
+        <!-- importing font awesome -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Open+Sans+Condensed:wght@300&family=Pacifico&display=swap" rel="stylesheet">
+        <script src="hero.js" defer></script>
+        <style>
+                body{
+                    padding: 20px 0;
+                    width: 940px;
+                    margin: auto;
+                    margin-top: 20px;
+                    box-shadow: 0 0  10px 10px gray;
+
+                }
+                #hero-idcard{
+                    background-color: rgb(134, 110, 134);
+                    height: 500px;
+                    width: 900px;
+                    margin: auto;
+                    /* box-shadow: 0 0  10px 10px gray; */
+
+                }
+                #headder{
+                    background-color: rgb(181, 122, 122);
+                    height: 100px;
+                    font-size: 1.3rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: baseline;
+                }
+                #headder h3{
+                    margin: 0 20px ;
+                }
+                #headder h1 i{
+
+                    padding:0 20px;
+                }
+                #powerstats{
+                    height: 100px;
+                    background-color: rgb(189, 162, 189);
+                    display: flex;
+                    justify-content: space-evenly;
+                    font-family: 'Open Sans Condensed', sans-serif;
+
+                }
+                .power-block{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 10px;
+                    
+                }
+                .power{
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    font-family: monospace;
+                }
+                .stats{
+                    font-size: 2rem;
+                }
+                #appereance{
+                    height: 300px;
+                    background-color: rgb(218, 211, 218);
+                    display: flex;
+
+                }
+                #image{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 250px;
+                    box-shadow:inset 0 0  2px 2px gray;
+
+                   
+
+                }
+                #image img{
+                    height: 250px;
+                    width: 200px;
+                    object-fit:cover;
+                    box-shadow:0 0  2px 2px gray;
+
+
+                }
+                #middle-part{
+                    width: 700px;
+                    /* box-shadow:inset 0 0  2px 2px gray; */
+
+                    
+                }
+                #name-tag{
+                    position: relative;
+                    display: flex;
+                    justify-content: space-evenly;
+
+                }
+
+                #name{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: 200px;
+                    margin-top: 30px;
+                }
+                #good-bad{
+                    position: absolute;
+                    padding-top: 20px;
+                    left: -40px;
+                }
+                #good-bad img{
+                    mix-blend-mode: multiply;
+                    transform: rotate(-30deg);
+                }
+                #superhero-name{
+                    font-size: 3rem;
+                    text-transform: uppercase;
+                    font-family: 'Pacifico', cursive;
+                }
+                #aka{
+                    font-size: 1.5rem;
+                }
+                #real-name{
+                    font-size: 2.5rem;
+                    text-transform: capitalize;
+                    font-family: 'Dancing Script', cursive;
+
+                }
+                #apperance-detail{
+                    display: flex;
+                    justify-content: space-evenly;
+                    height: 100px;
+
+
+                }
+                .detail-box{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    font-family: 'Open Sans Condensed', sans-serif;
+
+                }
+                
+
+
+
+
+
+
+        </style>
+        
+    </head>
+    <body>
+         <div id="hero-idcard">
+             <div id="headder">
+                 <h1><i class="fas fa-id-badge"></i></h1>
+                 <h1>LICENSE</h1><h3>OF</h3><h1>JUSTICE</h1>
+                 <h1><i class="fas fa-theater-masks"></i></h1>
+
+             </div>
+
+             <div id="detail">
+
+                <div id="powerstats">
+                    <div class="power-block">
+                        <div class="power">Intelligence</div>
+                        <div class="stats">
+                            <i class="fas fa-user-graduate"></i>
+                            <span >75</span>
+                        </div>
+                    </div>
+
+                    <div class="power-block">
+                        <div class="power">Speed</div>
+                        <div class="stats">
+                            <i class="fas fa-bolt"></i>
+                            <span >56</span>
+                        </div>
+                    </div>
+
+                   
+                    <div class="power-block">
+                        <div class="power">Power</div>
+                        <div class="stats">
+                            <i class="fab fa-superpowers"></i>
+
+                            <span>98</span>
+                        </div>
+                    </div>
+
+
+                    <div class="power-block">
+                        <div class="power">Stength</div>
+                        <div class="stats">
+                            <i class="fas fa-fist-raised"></i>
+
+                            
+                            <span>86</span>
+                        </div>
+                    </div>
+
+
+
+                   
+
+
+                    <div class="power-block">
+                        <div class="power">Combat</div>
+                        <div class="stats">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>56</span>
+                        </div>
+                    </div>
+
+
+                    
+
+                </div>
+
+                <div id="appereance">
+                    <div id="image">
+                        <img src="https://cdn3.vectorstock.com/i/1000x1000/90/72/superhero-kid-boy-cartoon-vector-10979072.jpg" alt="">
+
+                    </div>
+                    <div id="middle-part">
+                        <div id="name-tag">
+                            <div id="name">
+                                <span id="superhero-name">superman</span>
+                                <span id="aka">aka</span>
+                                <span id="real-name">clark kent</span>
+    
+    
+                            </div>
+                            <div id="good-bad">
+                                <img src="good.jpg" alt="">
+    
+                            </div>
+
+                        </div>
+                    
+                        <div id="apperance-detail">
+                            <div class="detail-box">
+                                <span >sex</span>
+                                <span>M</span>
+                            </div>
+                            <div class="detail-box">
+                                <span>height</span>
+                                <span>6'3</span>
+                            </div>
+                            <div class="detail-box">
+                                <span>weight</span>
+                                <span>117 kg</span>
+                            </div>
+                            <div class="detail-box">
+                                <span>hair-color</span>
+                                <span>blonde</span>
+                            </div>
+                            <div class="detail-box">
+                                <span>eyes</span>
+                                <span>blue</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+             </div>
+
+         </div>
+
+        
+    </body>
+</html>
