@@ -24,8 +24,11 @@ for(let id of arr){
             heroData.className='hero-data';
             heroData.id='hero-data'+id;
 
+            //clicking on hero will take us to that hero page
+            heroData.onclick = function(){currentHero(id)};
+
             //creating hero name
-            let heroName=document.createElement('P');
+            let heroName=document.createElement('span');
             let heroText=document.createTextNode(data.name);
             heroName.appendChild(heroText);
 
@@ -39,7 +42,7 @@ for(let id of arr){
             //creating delete button
             let button = document.createElement("BUTTON");
             button.className = 'delete-button';
-            button.innerHTML = '<span>Delete</span>';
+            button.innerHTML = '<span><i class="fas fa-trash"></i></span>';
             button.onclick = function() { deleteHero(id,heroData.id)};
 
         
@@ -74,4 +77,14 @@ function deleteHero(id,heroData){
   mySpace.setItem('heroIDs',JSON.stringify(arr));
   var element = document.getElementById(heroData);
   element.remove();
+  event.stopPropagation();
+}
+
+
+//current hero function, to take us to hero lisence page
+function currentHero(heroID){
+
+  //setting displayHero storage to clicked hero id
+  mySpace.setItem('displayHero',heroID);
+  window.location.assign("heroPage.html");//redirecting to hero page
 }

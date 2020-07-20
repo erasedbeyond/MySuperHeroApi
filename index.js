@@ -31,7 +31,7 @@ function loadHeroes() {
 
         //when search input is backspaced and there is no input value, return from function
         if(!searchInput.value){
-          allHeroContainer.innerHTML='enter';
+          allHeroContainer.innerHTML='';
           return;
         }
 
@@ -48,10 +48,12 @@ function loadHeroes() {
             //creating div for ever hero
             let heroData=document.createElement('div');
             heroData.className='hero-data';
+
+            //clicking on hero will take us to that hero page
             heroData.onclick = function(){currentHero(hero.id)};
 
             //creating hero name
-            let heroName=document.createElement('P');
+            let heroName=document.createElement('span');
             let heroText=document.createTextNode(hero.name);
             heroName.appendChild(heroText);
 
@@ -70,10 +72,14 @@ function loadHeroes() {
 
             //if hero is already added to favourite, then diferent style button
             if(arr.includes(hero.id)){
-              button.style.color="red";
+              button.style.color="maroon";
+              button.style.backgroundColor="white";
               button.innerHTML = '<span>Favourite</span><i class="fas fa-heart"></i>';
+
             }else{
-              button.innerHTML = '<span>Add to Favourite</span><i class="far fa-heart"></i>';
+              button.style.color="white";
+              button.style.backgroundColor="maroon";
+              button.innerHTML = '<span>Add to Favourite</span><i class="fas fa-heart"></i>';
             }
 
             //on click, it will remove or add accordingly
@@ -110,17 +116,23 @@ function loadHeroes() {
       console.log("already added, so deleting");
 
       deleteHero(data,heroID);
-      button.innerHTML = '<span>Add to Favourite</span><i class="far fa-heart"></i>';
-          button.style.color="black";
+      button.innerHTML = '<span>Add to Favourite</span><i class="fas fa-heart"></i>';
+      button.style.color="white";
+              button.style.backgroundColor="maroon";
+        
 
 
     //else adding to favourite,and changing button style to red
     }else{
       button.innerHTML = '<span>Favourite</span><i class="fas fa-heart"></i>';
-      button.style.color="red";
+      button.style.color="maroon";
+      button.style.backgroundColor="white";
+      
       data.push(heroID);
     }
     mySpace.setItem('heroIDs',JSON.stringify(data));
+    event.stopPropagation();
+
   }
 
   //delete function to delete hero from favourite
@@ -141,9 +153,10 @@ function loadHeroes() {
 
   //current hero function
   function currentHero(heroID){
+
+      //setting displayHero storage to clicked hero id
       mySpace.setItem('displayHero',heroID);
-      console.log("******curretn hero********")
-      window.location.assign("hero.html");
+      window.location.assign("heroPage.html");//redirecting to hero page
   }
   
 

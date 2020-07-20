@@ -1,0 +1,104 @@
+/* ----------index page/homepage--------- */
+
+
+
+/* top of the page */
+#header{
+    background-color: rgb(189, 162, 189);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+/* Styling home and favourite text */
+#header-top{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#header-top span{
+    padding: 20px 20px 0 20px;
+    color: maroon
+}
+
+
+/* Styling input and heading */
+#header-bottom{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 40px;
+
+}
+#header-bottom span{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Architects Daughter', cursive;
+
+}
+#search-hero{
+    height: 40px;
+    font-size: 1.2rem;
+    margin: auto;
+    width: 95%;
+    max-width: 500px;
+    font-family: 'Satisfy', cursive;
+
+
+  
+}
+
+
+/* Styling the block where serched hero will appear */
+#getting-hero{
+    background-color: rgb(218, 211, 218);
+    display: flex; 
+    flex-wrap: wrap;  
+    justify-content: center;
+    align-self: center;
+
+}
+
+
+/*Styling every block of hero output */
+.hero-data{
+    padding: 10px;
+    position: relative;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.hero-data:hover{
+    cursor: pointer;
+    box-shadow: 0 0 2px 2px  rgb(181, 122, 122);
+
+}
+.hero-data img{
+    width: 200px;
+    height: 250px;
+    
+}
+.hero-data>span{
+    background-color:  rgb(181, 122, 122) ;
+    border: 5px solid  rgb(181, 122, 122);
+    padding: 10px;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: inset 0 0 2px 2px rgb(255, 255, 255);
+    text-transform: capitalize;
+    font-family: 'Dancing Script', cursive;
+}
+.fav-button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    font-size: 1.2rem; 
+    cursor: pointer;   
+    border: 1px solid maroon;
+}
+

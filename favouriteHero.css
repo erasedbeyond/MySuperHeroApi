@@ -1,0 +1,106 @@
+/*----------- favourite page-------- */
+body{
+    margin: 20px 30px 20px 30px;
+    border:5px solid rgb(181, 122, 122);    
+}
+
+
+/* Styling heading */
+#header{
+    position: relative;
+    background-color: rgb(189, 162, 189);
+    border-bottom:5px solid rgb(181, 122, 122);
+}
+
+#header>span{
+    padding: 10px 0 15px 0;
+    color: maroon;
+    display: block;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem
+
+}
+
+/* Styling home page link */
+#header>a{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    border: 1px solid white;
+    padding: 3px;
+    box-shadow: 0 0 1px 1px gray;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+/* Styling block where all the favourite hero appears */
+#favourite-heroes{
+    background-color: white;
+    background-color: rgb(218, 211, 218);
+
+    display: flex; 
+    flex-wrap: wrap;  
+    justify-content: center;
+    align-self: center;
+
+}
+
+/* Styling every hero data */
+.hero-data{
+    padding: 10px;
+    position: relative;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 0 2px 2px  rgb(181, 122, 122);
+
+
+}
+
+.hero-data:hover{
+    cursor: pointer;
+    box-shadow: 0 0 4px 4px  rgb(181, 122, 122);
+
+}
+.hero-data img{
+    width: 200px;
+    height: 250px;
+    
+}
+.hero-data>span{
+    background-color:  rgb(181, 122, 122) ;
+    border: 5px solid  rgb(181, 122, 122);
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem;
+    box-shadow: inset 0 0 2px 2px rgb(255, 255, 255);
+    text-transform: capitalize;
+    font-family: 'Dancing Script', cursive;
+}
+
+
+/* Styling delete button */
+.delete-button{
+    position: absolute;
+    padding: 8px;
+    right: 10px;
+    bottom: 10px;
+    color: white;
+    font-size: 1.3rem;
+    box-shadow: 0 0px 5px white;
+    border-color: white;
+
+    background-color: rgb(119, 18, 18);
+    
+}
+.delete-button:hover{
+    background-color: rgba(255, 255, 255, 0.836);
+    cursor: grabbing;
+    color: rgb(107, 1, 1);
+}
