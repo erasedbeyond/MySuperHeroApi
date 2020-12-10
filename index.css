@@ -3,18 +3,35 @@
 
 
 /* top of the page */
+#main{
+    /* background: url('./Marvel-vs.-DC-750x395.jpg'); */
+    background-image: url('./background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    
+}
 #header{
-    background-color: rgb(189, 162, 189);
+    background-color: rgba(54, 53, 54, 0.438);
+    height: 250px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
 }
 /* Styling home and favourite text */
 #header-top{
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+#header-top a{
+    text-decoration: none;
+    color: white;
 }
 #header-top span{
     padding: 20px 20px 0 20px;
@@ -54,11 +71,15 @@
 
 /* Styling the block where serched hero will appear */
 #getting-hero{
-    background-color: rgb(218, 211, 218);
+    margin-top:250px ;
+    background-color: rgb(218, 211, 218,0.4);
     display: flex; 
     flex-wrap: wrap;  
     justify-content: center;
     align-self: center;
+    overflow-y: scroll;
+    max-height: 700px;
+    
 
 }
 
