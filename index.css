@@ -8,19 +8,20 @@
     background-image: url('./background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow: hidden;
 
     
 }
 #header{
     background-color: rgba(54, 53, 54, 0.438);
-    height: 250px;
+    height: 30vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: fixed;
+    position: sticky;
     z-index: 2;
-    top: 0;
+    top: 10px;
     left: 0;
 }
 /* Styling home and favourite text */
@@ -71,14 +72,14 @@
 
 /* Styling the block where serched hero will appear */
 #getting-hero{
-    margin-top:250px ;
+    
     background-color: rgb(218, 211, 218,0.4);
     display: flex; 
     flex-wrap: wrap;  
     justify-content: center;
     align-self: center;
     overflow-y: scroll;
-    max-height: 700px;
+    max-height:  65vh;
     
 
 }

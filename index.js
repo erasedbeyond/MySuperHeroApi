@@ -23,15 +23,17 @@ function loadHeroes() {
     var url='https://superheroapi.com/api.php/3234397013278924/search/'+searchInput.value;
    
     xhttp.onreadystatechange = function() {
+      console.log(this.status)
       if (this.readyState == 4 && this.status == 200) {
 
+        
         var data=JSON.parse(this.responseText);
         console.log(data);//data from superhero api
 
 
         //when search input is backspaced and there is no input value, return from function
-        if(!searchInput.value){
-          allHeroContainer.innerHTML='';
+        if(data.response==="error"){
+          allHeroContainer.innerHTML='<h2>No SuperHero with this name<h2>';
           return;
         }
 
@@ -99,6 +101,7 @@ function loadHeroes() {
         
         }
       }
+
     };
     xhttp.open("GET", url, true);
     xhttp.send();
@@ -156,6 +159,7 @@ function loadHeroes() {
 
       //setting displayHero storage to clicked hero id
       mySpace.setItem('displayHero',heroID);
+      document.getElementById("search-hero").value = ''
       window.location.assign("heroPage.html");//redirecting to hero page
   }
   
